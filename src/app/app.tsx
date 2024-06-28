@@ -1,12 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
+import Home from 'src/pages/Home/Home';
 import styles from './app.module.scss';
 
-import NxWelcome from './nx-welcome';
+
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="Junior-Booster" />
+     <Home />
     </div>
   );
 }
