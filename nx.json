@@ -29,7 +29,7 @@
       }
     }
   ],
-  "defaultProject": "Junior-Booster",
+  "defaultProject": "junior-booster",
   "generators": {
     "@nx/react": {
       "application": {

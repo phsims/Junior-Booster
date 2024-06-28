@@ -5,7 +5,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: './node_modules/.vite/Junior-Booster',
+  cacheDir: './node_modules/.vite/junior-booster',
 
   server: {
     port: 4200,
@@ -25,7 +25,7 @@ export default defineConfig({
   // },
 
   build: {
-    outDir: './dist/Junior-Booster',
+    outDir: './dist/junior-booster',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -37,14 +37,14 @@ export default defineConfig({
     watch: false,
     globals: true,
     cache: {
-      dir: './node_modules/.vitest/Junior-Booster',
+      dir: './node_modules/.vitest/junior-booster',
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
 
     reporters: ['default'],
     coverage: {
-      reportsDirectory: './coverage/Junior-Booster',
+      reportsDirectory: './coverage/junior-booster',
       provider: 'v8',
     },
   },
