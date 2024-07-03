@@ -45,6 +45,18 @@
     "jest.config.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
-    "dist/junior-booster/**/*"
+    "dist/junior-booster/**/*",
+    "**/*.stories.ts",
+    "**/*.stories.js"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "references": [
+    {
+      "path": "./tsconfig.storybook.json"
+    }
   ]
 }
