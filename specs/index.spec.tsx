@@ -1,10 +1,11 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 
-import RecipeCard from './RecipeCard';
+import Page from '../src/app/page';
 
-describe('RecipeCard', () => {
+describe('Page', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<RecipeCard />);
+    const { baseElement } = render(<Page />);
     expect(baseElement).toBeTruthy();
   });
 });

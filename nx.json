@@ -6,6 +6,9 @@
       "default",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/src/test-setup.[jt]s",
+      "!{projectRoot}/test-setup.[jt]s",
       "!{projectRoot}/.eslintrc.json",
       "!{projectRoot}/eslint.config.js"
     ],
@@ -13,13 +16,18 @@
   },
   "plugins": [
     {
-      "plugin": "@nx/vite/plugin",
+      "plugin": "@nx/next/plugin",
       "options": {
+        "startTargetName": "start",
         "buildTargetName": "build",
-        "testTargetName": "test",
-        "serveTargetName": "serve",
-        "previewTargetName": "preview",
+        "devTargetName": "dev",
         "serveStaticTargetName": "serve-static"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
       }
     },
     {
@@ -29,19 +37,9 @@
       }
     }
   ],
-  "defaultProject": "junior-booster",
   "generators": {
-    "@nx/react": {
+    "@nx/next": {
       "application": {
-        "babel": true,
-        "style": "scss",
-        "linter": "eslint",
-        "bundler": "vite"
-      },
-      "component": {
-        "style": "scss"
-      },
-      "library": {
         "style": "scss",
         "linter": "eslint"
       }
