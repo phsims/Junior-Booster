@@ -1,12 +1,28 @@
 import { Typography } from '@mui/material';
-import styles from './Header.module.scss';
+import LocalDiningIcon from '@mui/icons-material/LocalDining';
+import Box from '@mui/material/Box';
 
-export function Header() {
+interface HeaderProps {
+  title: string;
+}
+
+
+export function Header({ title }: HeaderProps) {
   return (
-    <div className={styles['container']}>
-      <Typography variant="h1">Welcome to Header!</Typography>
+    <div>
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <LocalDiningIcon 
+          color="primary"
+          fontSize="large"
+          data-testid="local-dining-icon"
+        />
+        <Typography variant="h1" component="h1" style={{ marginRight: '8px' }}>
+        Plan My Plate
+        </Typography>
+      </Box>
     </div>
   );
-}
+};
+
 
 export default Header;
