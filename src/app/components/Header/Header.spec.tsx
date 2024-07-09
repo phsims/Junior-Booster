@@ -12,4 +12,10 @@ describe('Header', () => {
     const headingElement = getByText('Plan My Plate');
     expect(headingElement).toBeInTheDocument();
   });
+
+  it('snapshot', () => {
+    const { baseElement } = render(<Header title={mockData.title} />);
+    expect(baseElement).toMatchSnapshot();
+  })
 });
+
