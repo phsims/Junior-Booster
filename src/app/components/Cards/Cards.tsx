@@ -5,7 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image'
-
+import { MainButton } from '../Button/Button';
 
 export interface recipiData {
 id: number;
@@ -17,7 +17,7 @@ summary: string;
 
 
 export function OutlinedCard(recipiData:recipiData) {
-  const truncatedSummary = `${recipiData.summary.substring(0, 80)}…`
+  const truncatedSummary =recipiData.summary && recipiData.summary.length > 80? `${recipiData.summary.substring(0, 80)}…`:recipiData.summary;
 
   return (
     <Box sx={{ maxWidth:357.33, maxHeight:367.8 }}>
@@ -37,7 +37,7 @@ export function OutlinedCard(recipiData:recipiData) {
       </Typography>
     </CardContent>
     <CardActions>
-      
+      <MainButton link={'www.google.com'} buttonText={'GO TO RECIPE >'}/>
     </CardActions>
     </Card>
     </Box>
