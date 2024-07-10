@@ -6,7 +6,7 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof OutlinedCard> = {
   component: OutlinedCard,
-  title: 'OutlinedCard',git 
+  title: 'OutlinedCard', 
 };
 export default meta;
 type Story = StoryObj<typeof OutlinedCard>;
