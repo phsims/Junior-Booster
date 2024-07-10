@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 
-export function Header({ title }: HeaderProps) {
+export function Header() {
   return (
     <div>
       <Box display="flex" justifyContent="center" alignItems="center">
