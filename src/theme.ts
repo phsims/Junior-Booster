@@ -10,7 +10,10 @@ const theme = createTheme({
     secondary: {
       main: '#dc004e', // Custom secondary color
     },
-  },
+    grey: {
+      50: '#F8F7F7'
+  }
+},
   typography: {
     fontFamily: 'Roboto, Arial, sans-serif',
     h1: {
