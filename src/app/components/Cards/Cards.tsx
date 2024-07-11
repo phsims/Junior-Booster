@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import { MainButton } from '../Button/Button';
 
+
 export interface recipiData {
   id: number;
   title: string;
@@ -15,12 +16,9 @@ export interface recipiData {
   summary: string;
 }
 
-export function OutlinedCard(recipiData: recipiData) {
-  const truncatedSummary =
-    recipiData.summary && recipiData.summary.length > 80
-      ? `${recipiData.summary.substring(0, 80)}…`
-      : recipiData.summary;
-
+export function OutlinedCard(recipiData:recipiData) {
+  const truncatedSummary =recipiData.summary && recipiData.summary.length > 80? `${recipiData.summary.substring(0, 80)}…`:recipiData.summary;
+  
   return (
    
       <Card variant="outlined">
