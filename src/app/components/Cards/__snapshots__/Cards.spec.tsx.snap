@@ -4,52 +4,48 @@ exports[`OutlinedCard snapshot 1`] = `
 <body>
   <div>
     <div
-      class="MuiBox-root css-b96vz3"
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1v5z4dq-MuiPaper-root-MuiCard-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1v5z4dq-MuiPaper-root-MuiCard-root"
+        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
       >
+        <img
+          alt="Recipe Artisan Farfalle Pasta With Smoked Salmon and Cream Sauce"
+          data-nimg="1"
+          decoding="async"
+          height="140"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fimg.spoonacular.com%2Frecipes%2F632778-556x370.jpg&w=750&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fimg.spoonacular.com%2Frecipes%2F632778-556x370.jpg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fimg.spoonacular.com%2Frecipes%2F632778-556x370.jpg&w=750&q=75 2x"
+          style="color: transparent;"
+          width="322"
+        />
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
         >
-          <img
-            alt="Recipe Artisan Farfalle Pasta With Smoked Salmon and Cream Sauce"
-            data-nimg="1"
-            decoding="async"
-            height="140"
-            loading="lazy"
-            src="/_next/image?url=https%3A%2F%2Fimg.spoonacular.com%2Frecipes%2F632778-556x370.jpg&w=750&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fimg.spoonacular.com%2Frecipes%2F632778-556x370.jpg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fimg.spoonacular.com%2Frecipes%2F632778-556x370.jpg&w=750&q=75 2x"
-            style="color: transparent;"
-            width="322"
+          Artisan Farfalle Pasta With Smoked Salmon and Cream Sauce
+        </div>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+        >
+          <strong>
+            Artisan Farfalle Pasta With Smoked Salmon and Cream Sauce might be just the main…
+          </strong>
+        </p>
+      </div>
+      <div
+        class="MuiCardActions-root MuiCardActions-spacing css-dnrpxu-MuiCardActions-root"
+      >
+        <a
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          href="www.google.com"
+          tabindex="0"
+        >
+          GO TO RECIPE &gt;
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
           />
-          <div
-            class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
-          >
-            Artisan Farfalle Pasta With Smoked Salmon and Cream Sauce
-          </div>
-          <p
-            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
-          >
-            <strong>
-              Artisan Farfalle Pasta With Smoked Salmon and Cream Sauce might be just the main…
-            </strong>
-          </p>
-        </div>
-        <div
-          class="MuiCardActions-root MuiCardActions-spacing css-dnrpxu-MuiCardActions-root"
-        >
-          <a
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1e6y48t-MuiButtonBase-root-MuiButton-root"
-            href="www.google.com"
-            tabindex="0"
-          >
-            GO TO RECIPE &gt;
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
-          </a>
-        </div>
+        </a>
       </div>
     </div>
   </div>

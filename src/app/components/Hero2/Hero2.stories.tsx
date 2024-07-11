@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Hero2 } from './Hero2';
-import { mockData } from '../mock-data';
-
+import { mockData } from '../../testData/mock-data';
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
