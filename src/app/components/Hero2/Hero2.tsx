@@ -11,7 +11,6 @@ export interface HeroProps {
   title: string;
 }
 
-console.log('work');
 
 export function Hero2({ logo, description, title }: HeroProps) {
   return (
