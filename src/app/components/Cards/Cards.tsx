@@ -21,7 +21,6 @@ summary: string;
 
 export function OutlinedCard({ image, title, summary, id }:recipiData) {
   const truncatedSummary = DOMPurify.sanitize(`${summary?.substring(0, 70)}...`);
-  console.log(truncatedSummary);
   
   return (
     <Box sx={{ maxWidth:357.33, maxHeight:367.8 }}>
