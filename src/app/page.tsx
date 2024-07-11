@@ -9,26 +9,39 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 export default function Index() {
-
   return (
-      <>
-        <Header />
-      
-        <Hero2 {...mockData}/>
+    <>
+      <Header />
 
-        { <Container>
-          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 12, sm: 8, md: 4 }}>  
+      <Hero2 {...mockData} />
+
+      <Container>
+        <Grid
+
+          container
+          spacing={{ xs: 3, md: 5 }}
+          sx={{ alignItems: 'stretch' ,paddingTop: 5}}
+        >
           {mockRecipes.recipes.map((element) => (
-              <Cards 
+            <Grid
+              item
+              lg={4}
+              sm={6}
+              xs={12}
+              sx={{ display: 'flex', alignItems: 'stretch' }}
+            >
+              <Cards
+              
                 key={element.id}
                 id={element.id}
                 title={element.title}
                 image={element.image}
-                summary={element.summary}    
+                summary={element.summary}
               />
-              ))}
-          </Grid>
-        </Container> }
-      </>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </>
   );
 }
