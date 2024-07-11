@@ -6,7 +6,7 @@ const IMGURL = process.env.NEXT_PUBLIC_SPOONACULAR_IMG_URL;
 
 export async function fetchRecipes(): Promise<recipiData[]> {
   try {
-    const response = await fetch(`${BASEURL}/recipes/random/?apiKey=${APIKEY}`);
+    const response = await fetch(`${BASEURL}/recipes/random/?apiKey=${APIKEY}&number=12`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

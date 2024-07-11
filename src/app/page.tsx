@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './page.module.scss';
 import Header from './components/Header/Header';
 import Cards from './components/Cards/Cards';
@@ -7,8 +9,14 @@ import { mockData } from './testData/mock-data';
 import { Container } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import { fetchRecipes } from './api/recipe/api';
+import * as React from 'react';
+import { recipiData } from './components/Cards/Cards';
+
 
 export default function Index() {
+  const [data, setData] = React.useState<recipiData[]>()
+  React.useEffect(()=>{fetchRecipes().then((e)=>{setData(e)})},[])
   return (
     <>
       <Header />
@@ -22,7 +30,8 @@ export default function Index() {
           spacing={{ xs: 3, md: 5 }}
           sx={{ alignItems: 'stretch' ,paddingTop: 5}}
         >
-          {mockRecipes.recipes.map((element) => (
+          
+          {data?.map((element) => (
             <Grid
               item
               lg={4}
