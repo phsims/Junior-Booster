@@ -1,6 +1,6 @@
 import {recipiData} from '../../components/Cards/Cards'
 
-const APIKEY = process.env.NEXT_PRIVATE_SPOONACULAR_API_KEY;
+const APIKEY = 'cafb6cd25e8c42f8b25dbfae5193e6ea';
 const BASEURL = process.env.NEXT_PUBLIC_SPOONACULAR_BASE_URL;
 const IMGURL = process.env.NEXT_PUBLIC_SPOONACULAR_IMG_URL;
 

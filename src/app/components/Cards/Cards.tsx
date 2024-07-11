@@ -1,46 +1,54 @@
+
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Image from 'next/image';
+import Image from 'next/image'
 import { MainButton } from '../Button/Button';
-
+import DOMPurify from 'isomorphic-dompurify';
 
 export interface recipiData {
-  id: number;
-  title: string;
-  image: string;
-  imageType?: string;
-  summary: string;
-}
+id: number;
+title: string;
+image: string;
+imageType?: string;
+summary: string;
+} 
 
-export function OutlinedCard(recipiData:recipiData) {
-  const truncatedSummary =recipiData.summary && recipiData.summary.length > 80? `${recipiData.summary.substring(0, 80)}…`:recipiData.summary;
+
+export function OutlinedCard({ image, title, summary, id }:recipiData) {
+  const truncatedSummary = DOMPurify.sanitize(`${summary?.substring(0, 70)}...`);
+  console.log(truncatedSummary);
   
   return (
-   
+    <Box sx={{ maxWidth:357.33, maxHeight:367.8 }}>
       <Card variant="outlined">
         <CardContent>
-          <Image
-            src={recipiData.image}
-            width={322}
-            height={140}
-            alt={`Recipe ${recipiData.title}`}
+        <Image
+      src={image}
+      width={322}
+      height={140}
+      alt={`Recipe ${title}`}
+    />
+      <Typography variant="h5" component="div">
+      {title}
+      </Typography>
+      {summary && (
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            dangerouslySetInnerHTML={{ __html: truncatedSummary }}
           />
-          <Typography variant="h5" component="div">
-            {recipiData.title}
-          </Typography>
-          <Typography variant="body2">
-            <strong>{truncatedSummary}</strong>
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <MainButton link={'www.google.com'} buttonText={'GO TO RECIPE >'} />
-        </CardActions>
-      </Card>
- 
+        )}
+    </CardContent>
+    <CardActions>
+      <MainButton link={`recipes/${id}`} buttonText={'GO TO RECIPE >'}/>
+    </CardActions>
+    </Card>
+    </Box>
   );
 }
 

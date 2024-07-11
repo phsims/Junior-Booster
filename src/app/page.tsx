@@ -11,10 +11,12 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { fetchRecipes } from './api/recipe/api';
 import * as React from 'react';
+import { recipiData } from './components/Cards/Cards';
+
 
 export default function Index() {
-  const [data, setData] = React.useState([])
-  React.useEffect(()=>{fetchRecipes().then((e)=>{setData(e as [])})},[])
+  const [data, setData] = React.useState<recipiData[]>()
+  React.useEffect(()=>{fetchRecipes().then((e)=>{setData(e)})},[])
   return (
     <>
       <Header />
@@ -29,7 +31,7 @@ export default function Index() {
           sx={{ alignItems: 'stretch' ,paddingTop: 5}}
         >
           
-          {data.map((element) => (
+          {data?.map((element) => (
             <Grid
               item
               lg={4}
